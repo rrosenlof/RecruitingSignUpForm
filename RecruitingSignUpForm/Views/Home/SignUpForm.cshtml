@@ -1,0 +1,55 @@
+﻿<!--Ross Rosenlof Oct 23, 2018-->
+
+@model RoseLeaf.Models.Student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SignUpForm</title>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:800|Libre+Baskerville" rel="stylesheet">
+    <link href="~/Content/MyStyles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div>
+        <h1>Sign up to learn more about RoseLeaf! 🌹</h1>
+        <div class="form-text">
+            @using (Html.BeginForm()) //Goes to Index Method
+            {
+                <p>Name: <br /> @Html.TextBoxFor(x => x.Name)</p>
+                <p>Email: <br /> @Html.TextBoxFor(x => x.Email)</p>
+                <p>Phone: <br /> @Html.TextBoxFor(x => x.Phone)</p>
+                <p>Major: <br /> @Html.TextBoxFor(x => x.Major)</p>
+                <p>
+                    School:<br /> @Html.DropDownListFor(x => x.School, new[] {
+new SelectListItem() {Text = "Brigham Young University", Value = "BYU"},
+new SelectListItem() {Text = "Utah Valley University", Value = "UVU"},
+new SelectListItem() {Text = "Westminster College", Value = "WC" },
+new SelectListItem() {Text = "LDS Business College", Value = "LDSBC" },
+new SelectListItem() {Text = "University of Utah", Value = "UofU"}
+},
+"--------")
+                </p>
+                <p>
+                    Field of Interest:<br /> @Html.DropDownListFor(x => x.FieldOfInterest, new[] {
+new SelectListItem() {Text = "Web Development", Value = "WebDev"},
+new SelectListItem() {Text = "Business Intelligence", Value = "BI"},
+new SelectListItem() {Text = "Project Management", Value = "PM" },
+new SelectListItem() {Text = "User Experience/Interface Design", Value = "UX/UI" }
+},
+"--------") <br />(Please Select Just One)
+                </p>
+                <p>Sign up for our newsletter? @Html.CheckBoxFor(x => x.EmailList)</p>
+
+                <input type="submit" value="Submit Info" />
+
+            }
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿<!--Ross Rosenlof Oct 23, 2018-->
+
+@model RoseLeaf.Models.Student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ThankYou</title>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:800|Libre+Baskerville" rel="stylesheet">
+    <link href="~/Content/MyStyles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div>
+        <h1>Thanks @Model.Name!</h1>
+        <p>Our recruiters will be in contact with you for information regarding info sessions and on-campus interviews</p>
+
+        <a href="@Url.Action("Index", "Home")">Return to Home Page</a>
+        <br />
+        <br />
+        <a href="@Url.Action("SignUpForm", "Home")">Add another student</a>
+    </div>
+</body>
+</html>

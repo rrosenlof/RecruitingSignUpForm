@@ -1,0 +1,49 @@
+﻿/*Ross Rosenlof Oct 23, 2018*/
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    padding-top: 40px;
+    background-color: #e7dbdb;
+    font-family: 'Libre Baskerville', serif;
+}
+
+h1 {
+    color: #b33e3e;
+    font-size: 54px;
+    font-family: 'Dosis', sans-serif;
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: #5b0505;
+    font-size: 22px;
+}
+
+a {
+    background-color: rgba(87, 55, 55, 0.69)
+}
+
+a:hover {
+    background-color: rgba(149, 89, 89, 0.82)
+}
+
+table {
+    padding: 25px;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+td, tr {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid black;
+}
+
+th {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid black;
+    font-size: large;
+}

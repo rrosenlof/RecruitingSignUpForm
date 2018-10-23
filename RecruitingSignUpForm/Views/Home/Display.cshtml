@@ -1,0 +1,54 @@
+﻿<!--Ross Rosenlof Oct 23, 2018-->
+
+@model RoseLeaf.Models.Student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Display</title>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:800|Libre+Baskerville" rel="stylesheet">
+    <link href="~/Content/MyStyles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div>
+        <h1>Student Info</h1>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Major</th>
+                <th>School</th>
+                <th>Emphasis</th>
+                <th>Email List?</th>
+            </tr>
+
+
+            @foreach (var item in ViewBag.Results)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Email</td>
+                    <td>@item.Phone</td>
+                    <td>@item.Major</td>
+                    <td>@item.School</td>
+                    <td>@item.FieldOfInterest</td>
+                    <td>@item.EmailList</td>
+                </tr>
+            }
+
+
+        </table>
+        <br />
+        <br />
+        <a href="@Url.Action("Index", "Home")">Return to Home Page</a>
+
+    </div>
+</body>
+</html>
