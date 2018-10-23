@@ -1,7 +1,9 @@
 # Recruiting Sign Up Form
 ### IS 403 Midterm Practice Problem
 You work for RoseLeaf, a local tech startup doing web development. You have been tasked with recruiting at career fairs at universities and colleges in Utah and Salt Lake counties to find the best and brightest students to help the company expand. 
+
 You have been asked to make a website that will be displayed on an iPad or laptop at your booth. After you give your spiel, students can give you their information to continue the recruiting process. 
+
 Make an simple website using the MVC framework to gather this information for your company. 
 
 ### Brief Instructions 
